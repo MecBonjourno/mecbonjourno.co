@@ -1,14 +1,16 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import Player from '../components/play';
 
 export default function Home() {
   return (
     <div>
-      {/* <Head>
+      <Head>
         <title>MecBonjourno</title>
-        <meta name="description" content="Superior The Watcher" />
+        <meta name="description" content="The PAZ plan" />
         <link rel="icon" href="/favicon.ico" />
-      </Head> */}
+      </Head>
       <div className="art">
         <div className="art-content">
           <h2 className="art-title">PAZ</h2>
@@ -18,6 +20,7 @@ export default function Home() {
           </a>
         </div>
       </div>
+      <Player url={'/moon.mp3'} />
     </div>
   );
 }
